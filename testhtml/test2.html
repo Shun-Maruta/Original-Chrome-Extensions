@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>複雑な構造のサイト</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #666;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #444;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .highlight {
+            background-color: #ffeb3b;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container>div {
+            flex: 0 0 48%;
+            margin-bottom: 20px;
+        }
+
+        .responsive-table {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>複雑な構造のWebサイト</h1>
+    </header>
+
+    <nav>
+        <a href="#">ホーム</a>
+        <a href="#">サービス</a>
+        <a href="#">ポートフォリオ</a>
+        <a href="#">お問い合わせ</a>
+    </nav>
+
+    <section>
+        <h2>メインセクション</h2>
+        <p>ここにはいくつかのコンテンツがあります。このページの目的は、複雑な構造のHTMLとCSSを使って、様々なレイアウトや要素を作成することです。</p>
+    </section>
+
+    <section>
+        <h2>データテーブル（id="myTable"）</h2>
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th>年齢</th>
+                    <th>職業</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>田中 太郎</td>
+                    <td>35</td>
+                    <td>エンジニア</td>
+                </tr>
+                <tr class="highlight">
+                    <td>佐藤 花子</td>
+                    <td>28</td>
+                    <td>デザイナー</td>
+                </tr>
+                <tr>
+                    <td>鈴木 一郎</td>
+                    <td>40</td>
+                    <td>マネージャー</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>その他のテーブル</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>プロジェクト名</th>
+                    <th>進行状況</th>
+                    <th>期限</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ウェブサイトリニューアル</td>
+                    <td>進行中</td>
+                    <td>2025/05/30</td>
+                </tr>
+                <tr>
+                    <td>モバイルアプリ開発</td>
+                    <td>完了</td>
+                    <td>2024/12/15</td>
+                </tr>
+                <tr>
+                    <td>マーケティングキャンペーン</td>
+                    <td>未開始</td>
+                    <td>2025/03/01</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="container">
+        <div>
+            <h2>カード型のコンテンツ</h2>
+            <div class="card">
+                <h3>カード1</h3>
+                <p>こちらはカード型のレイアウトです。カードはホバーすると少し大きくなります。</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>さらに別のカード</h2>
+            <div class="card">
+                <h3>カード2</h3>
+                <p>レスポンシブデザインにも対応しています。ウィンドウサイズを変更してみてください。</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>レスポンシブテーブル</h2>
+        <div class="responsive-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>製品名</th>
+                        <th>価格</th>
+                        <th>在庫状況</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>製品A</td>
+                        <td>¥5000</td>
+                        <td>あり</td>
+                    </tr>
+                    <tr>
+                        <td>製品B</td>
+                        <td>¥3000</td>
+                        <td>なし</td>
+                    </tr>
+                    <tr>
+                        <td>製品C</td>
+                        <td>¥7000</td>
+                        <td>あり</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 複雑な構造のWebサイト | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
