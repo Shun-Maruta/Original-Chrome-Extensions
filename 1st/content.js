@@ -1,7 +1,6 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === "read_table") {
-        // const table = document.querySelector("table");
-        const table = document.getElementById("myTable");
+        const table = document.querySelector('[data-test-id="generic-table-body"]');
         if (table) {
             // テーブルデータを取得する
             const rows = Array.from(table.rows).map(row => {
